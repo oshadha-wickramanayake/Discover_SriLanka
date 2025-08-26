@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Sri Lanka</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --bs-body-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1580933073521-dc49ac0d4e6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
+        
+        .dashboard-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .content-section {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.7) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .active-content {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .tab-content {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: #ff6b00;
+        }
+        
+        .nav-pills .nav-link {
+            color: #fff;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-date {
+            position: absolute;
+            left: -50px;
+            width: 40px;
+            text-align: right;
+            color: #ff6b00;
+            font-weight: bold;
+        }
+        
+        .timeline-content {
+            padding-left: 20px;
+            border-left: 2px solid #ff6b00;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-globe-asia-australia"></i> Discover Sri Lanka
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-section="dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="active-content">
+            <h1 class="text-center mb-5">Explore Sri Lanka</h1>
+            
+            <div class="row g-4">
+                <!-- History Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dashboard-card text-white" data-section="history">
+                        <img src="https://i.pinimg.com/736x/b9/96/2a/b9962afdcb4fea936d740b1fc203f8b1.jpg" class="card-img-top" alt="Ancient Ruins">
+                        <div class="card-body">
+                            <h5 class="card-title">Sri Lankan History</h5>
+                            <p class="card-text">Discover 3,000 years of civilization from ancient kingdoms to colonial rule and modern independence.</p>
+                            <button class="btn btn-outline-light">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Places to Visit Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dashboard-card text-white" data-section="places">
+                        <img src="https://www.lovidhu.com/uploads/posts/2021/03//sigiria-sri-lanka-945x630.jpg" class="card-img-top" alt="Sigiriya Rock">
+                        <div class="card-body">
+                            <h5 class="card-title">Must-Visit Places</h5>
+                            <p class="card-text">8 UNESCO World Heritage Sites and breathtaking natural wonders await you.</p>
+                            <button class="btn btn-outline-light">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Handicrafts Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dashboard-card text-white" data-section="handicrafts">
+                        <img src="https://cdn.kimkim.com/files/a/images/c6d838289ce5e1346e022b768a9d42e5d60d0e47/original-503f3d3a0a827ad92c8c576c8887258b.jpg" class="card-img-top" alt="Traditional Handicrafts">
+                        <div class="card-body">
+                            <h5 class="card-title">Sri Lankan Handicrafts</h5>
+                            <p class="card-text">Explore centuries-old artisan traditions from wood carving to handloom textiles.</p>
+                            <button class="btn btn-outline-light">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Traditions & Culture Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dashboard-card text-white" data-section="culture">
+                        <img src="https://www.srilankaembassy.fr/sites/default/files/files/users/user137/esala-perahera.jpg" class="card-img-top" alt="Cultural Dance">
+                        <div class="card-body">
+                            <h5 class="card-title">Traditions & Culture</h5>
+                            <p class="card-text">Immerse yourself in vibrant festivals, dances, and multicultural traditions.</p>
+                            <button class="btn btn-outline-light">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Disasters & War Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dashboard-card text-white" data-section="disasters">
+                        <img src="https://static.wixstatic.com/media/e15208_b9626e3d18634d35968c7cadff6f3d14~mv2.png/v1/fill/w_568,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e15208_b9626e3d18634d35968c7cadff6f3d14~mv2.png" class="card-img-top" alt="Flood Damage">
+                        <div class="card-body">
+                            <h5 class="card-title">Disasters & Civil War</h5>
+                            <p class="card-text">Learn about Sri Lanka's resilience through 25 years of conflict and natural disasters.</p>
+                            <button class="btn btn-outline-light">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vega Supercar Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dashboard-card text-white" data-section="vega">
+                        <img src="https://vega.lk/img/invester/group.jpg" class="card-img-top" alt="Vega EVX Supercar">
+                        <div class="card-body">
+                            <h5 class="card-title">Vega EVX Supercar</h5>
+                            <p class="card-text">Discover Sri Lanka's groundbreaking 804HP electric supercar innovation.</p>
+                            <button class="btn btn-outline-light">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- History Content -->
+        <section id="history-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Sri Lankan History</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="historyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="https://i.pinimg.com/736x/b9/96/2a/b9962afdcb4fea936d740b1fc203f8b1.jpg" class="d-block w-100" alt="Ancient Ruins">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.wixstatic.com/media/ad244f_68f223ddcfa84b20a38f5fd64971832f~mv2.jpg/v1/fill/w_980,h_553,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ad244f_68f223ddcfa84b20a38f5fd64971832f~mv2.jpg" class="d-block w-100" alt="Sigiriya Rock">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://airlinescrewtours.com/wp-content/uploads/2022/09/IPS1.jpg" class="d-block w-100" alt="Colonial Era">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#historyCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#historyCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p>Sri Lanka's history spans over 3,000 years, with evidence of prehistoric human settlements dating back to 125,000 BCE. The island's strategic location made it a hub for ancient trade routes, connecting East and West.</p>
+                    <p>The earliest recorded civilization dates to 543 BCE with the arrival of Prince Vijaya from India. The Anuradhapura Kingdom (377 BCE-1017 CE) established Buddhism as the national religion after Emperor Ashoka's son Mahinda introduced it in 247 BCE.</p>
+                    <p>Portuguese explorers arrived in 1505, beginning 443 years of colonial rule that passed through Portuguese (1505-1658), Dutch (1658-1796), and British (1796-1948) administrations. Independence was finally achieved on February 4, 1948.</p>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h4>Key Historical Periods</h4>
+                <ul class="nav nav-pills mb-3" id="history-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="ancient-tab" data-bs-toggle="pill" data-bs-target="#ancient" type="button">Ancient Kingdoms</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="colonial-tab" data-bs-toggle="pill" data-bs-target="#colonial" type="button">Colonial Era</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="modern-tab" data-bs-toggle="pill" data-bs-target="#modern" type="button">Modern Nation</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="history-tabs-content">
+                    <div class="tab-pane fade show active" id="ancient" role="tabpanel">
+                        <h5>Anuradhapura Period (377 BCE-1017 CE)</h5>
+                        <p>Established by King Pandukabhaya, this was Sri Lanka's first major kingdom. Key developments include:</p>
+                        <ul>
+                            <li>Construction of massive stupas like Ruwanwelisaya (140m tall)</li>
+                            <li>Advanced hydraulic systems with 30,000 reservoirs</li>
+                            <li>The sacred Bodhi tree planted in 288 BCE - oldest known human-planted tree</li>
+                        </ul>
+                        
+                        <h5>Polonnaruwa Period (1017-1236)</h5>
+                        <p>The second capital after Chola invasions, featuring:</p>
+                        <ul>
+                            <li>King Parakramabahu's sea-turtle shaped Parakrama Samudra reservoir</li>
+                            <li>Gal Vihara's 4 monumental Buddha statues carved from granite</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="colonial" role="tabpanel">
+                        <h5>Portuguese Era (1505-1658)</h5>
+                        <ul>
+                            <li>Introduced Catholicism and cashew cultivation</li>
+                            <li>Built coastal forts like Galle (now UNESCO site)</li>
+                            <li>Began the "Burgher" Eurasian community</li>
+                        </ul>
+                        
+                        <h5>Dutch Period (1658-1796)</h5>
+                        <ul>
+                            <li>Established Roman-Dutch legal system still used today</li>
+                            <li>Developed cinnamon plantations</li>
+                            <li>Built canals and introduced Protestantism</li>
+                        </ul>
+                        
+                        <h5>British Rule (1796-1948)</h5>
+                        <ul>
+                            <li>Made English the official language</li>
+                            <li>Established tea, rubber and coconut plantations</li>
+                            <li>Built railways and modern infrastructure</li>
+                            <li>Introduced the legislative council in 1833</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="modern" role="tabpanel">
+                        <h5>Post-Independence (1948-present)</h5>
+                        <p>Key events in modern Sri Lankan history:</p>
+                        <ul>
+                            <li><strong>1948:</strong> Independence as Dominion of Ceylon</li>
+                            <li><strong>1956:</strong> Sinhala Only Act sparks ethnic tensions</li>
+                            <li><strong>1972:</strong> Becomes Republic of Sri Lanka</li>
+                            <li><strong>1983-2009:</strong> Civil war with LTTE Tamil Tigers</li>
+                            <li><strong>2004:</strong> Indian Ocean tsunami kills 35,000</li>
+                            <li><strong>2019:</strong> Easter Sunday bombings by Islamist extremists</li>
+                            <li><strong>2022:</strong> Economic crisis leads to political unrest</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white mt-4">
+                <div class="card-body">
+                    <h4>Historical Timeline</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">543 BCE</div>
+                            <div class="timeline-content">
+                                <h6>Arrival of Prince Vijaya</h6>
+                                <p>Legendary founder of the Sinhalese people arrives from India</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">247 BCE</div>
+                            <div class="timeline-content">
+                                <h6>Introduction of Buddhism</h6>
+                                <p>Emperor Ashoka's son Mahinda brings Buddhism to Sri Lanka</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1505</div>
+                            <div class="timeline-content">
+                                <h6>Portuguese Arrival</h6>
+                                <p>Lourenço de Almeida lands in Colombo, beginning colonial era</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1948</div>
+                            <div class="timeline-content">
+                                <h6>Independence</h6>
+                                <p>Ceylon gains independence from Britain</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2009</div>
+                            <div class="timeline-content">
+                                <h6>End of Civil War</h6>
+                                <p>Government defeats LTTE after 26-year conflict</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Places to Visit Content -->
+        <section id="places-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Must-Visit Places in Sri Lanka</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle-fill"></i> Sri Lanka has 8 UNESCO World Heritage Sites - 6 cultural and 2 natural.
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/d6/3c/80.jpg" class="card-img-top" alt="Sigiriya">
+                        <div class="card-body">
+                            <h5 class="card-title">Sigiriya Rock Fortress</h5>
+                            <p class="card-text">This 5th-century "Lion Rock" palace complex rises 200m above the jungle. Features include:</p>
+                            <ul>
+                                <li>Famous frescoes of the "Sigiriya Maidens"</li>
+                                <li>Mirror Wall with ancient graffiti</li>
+                                <li>Elaborate water gardens</li>
+                                <li>Lion's Paw gateway</li>
+                            </ul>
+                            <p><strong>Best time to visit:</strong> January-April (dry season)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="https://live.staticflickr.com/6205/6055295479_2f42403189_b.jpg" class="card-img-top" alt="Kandy">
+                        <div class="card-body">
+                            <h5 class="card-title">Temple of the Sacred Tooth Relic</h5>
+                            <p class="card-text">Kandy's most sacred Buddhist site houses Buddha's left canine tooth. Highlights:</p>
+                            <ul>
+                                <li>Daily rituals at 6:30am, 9:30am and 6:30pm</li>
+                                <li>Annual Esala Perahera festival (July/August)</li>
+                                <li>Golden canopy over the relic chamber</li>
+                                <li>Kandy Lake views</li>
+                            </ul>
+                            <p><strong>Dress code:</strong> Cover shoulders and knees</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="https://www.22weligambay.com/images/experiences/yala-national-park/yala-slider1.jpg" class="card-img-top" alt="Yala">
+                        <div class="card-body">
+                            <h5 class="card-title">Yala National Park</h5>
+                            <p class="card-text">Sri Lanka's premier wildlife sanctuary with:</p>
+                            <ul>
+                                <li>Highest leopard density in the world</li>
+                                <li>400+ elephants and 215 bird species</li>
+                                <li>Ancient rock inscriptions</li>
+                                <li>Coastal lagoons and monsoon forests</li>
+                            </ul>
+                            <p><strong>Safari times:</strong> 6-10am and 3-6pm daily</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="https://d1bv4heaa2n05k.cloudfront.net/user-images/1533888386047/shutterstock-307224302_destinationMain_1533888398803.jpeg" class="card-img-top" alt="Anuradhapura">
+                        <div class="card-body">
+                            <h5 class="card-title">Anuradhapura</h5>
+                            <p class="card-text">Ancient capital with remarkable ruins:</p>
+                            <ul>
+                                <li>Sacred Bodhi Tree (oldest historical tree)</li>
+                                <li>Jetavanaramaya - 3rd tallest ancient structure</li>
+                                <li>Ruwanwelisaya dagoba (103m circumference)</li>
+                                <li>Moonstone carvings at Isurumuniya</li>
+                            </ul>
+                            <p><strong>Tip:</strong> Rent a bicycle to explore the vast site</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="https://www.orienthotelsl.com/wp-content/uploads/2023/01/Nine-Arch-Bridge-Ella-1200x630-1.jpg" class="card-img-top" alt="Ella">
+                        <div class="card-body">
+                            <h5 class="card-title">Ella</h5>
+                            <p class="card-text">Mountain retreat with stunning scenery:</p>
+                            <ul>
+                                <li>Ella Rock hike (2-3 hours)</li>
+                                <li>Nine Arches Bridge (photogenic railway)</li>
+                                <li>Ravana Falls and caves</li>
+                                <li>Tea plantation tours</li>
+                            </ul>
+                            <p><strong>Must-do:</strong> Train ride from Kandy to Ella</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="https://do6raq9h04ex.cloudfront.net/sites/8/2021/07/galle-fort-1050x700-1.jpg" class="card-img-top" alt="Galle">
+                        <div class="card-body">
+                            <h5 class="card-title">Galle Fort</h5>
+                            <p class="card-text">Dutch-colonial seaside fortress:</p>
+                            <ul>
+                                <li>17th-century ramparts and lighthouse</li>
+                                <li>Boutique shops and cafes</li>
+                                <li>National Maritime Museum</li>
+                                <li>Whale watching tours (Nov-Apr)</li>
+                            </ul>
+                            <p><strong>Unique feature:</strong> Still a living community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h4>Travel Tips</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Best Time to Visit</h6>
+                            <ul>
+                                <li><strong>West/South:</strong> December-April</li>
+                                <li><strong>East:</strong> May-September</li>
+                                <li><strong>Cultural Triangle:</strong> Year-round</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Transportation</h6>
+                            <ul>
+                                <li>Trains for scenic routes</li>
+                                <li>Private drivers for flexibility</li>
+                                <li>Tuk-tuks for short distances</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Essential Experiences</h6>
+                            <ul>
+                                <li>Sigiriya sunrise climb</li>
+                                <li>Yala safari</li>
+                                <li>Kandy cultural show</li>
+                                <li>Galle Fort sunset</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Handicrafts Content -->
+        <section id="handicrafts-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Sri Lankan Handicrafts</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://cdn.prod.website-files.com/6364d88dd010ce5c6f8aa8fc/66d7df3837a99fc7e3909655_66963d0a3130be49dece9fa2_Wood%2520Carvings%25201.jpeg" class="img-fluid rounded mb-4" alt="Traditional Handicrafts">
+                </div>
+                <div class="col-md-6">
+                    <h4>Traditional Sri Lankan Crafts</h4>
+                    <p>Sri Lanka has a rich tradition of handicrafts that reflect its cultural heritage and artistic skills passed down through generations. These crafts are deeply connected to the island's Buddhist heritage and natural resources.</p>
+                    
+                    <div class="accordion" id="handicraftsAccordion">
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Wood Carving
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#handicraftsAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Ambalangoda Masks:</strong> These colorful ritual masks are carved from light balsa wood and used in traditional healing ceremonies (thovil) and kolam dance dramas. The 24 main mask types represent various deities and demons.</p>
+                                    <p><strong>Temple Carvings:</strong> Intricately carved wooden pillars, doors and ceilings adorn ancient temples like Lankatilaka and Embekke Devalaya (14th century), featuring peacocks, dancers and wrestlers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Handloom Textiles
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#handicraftsAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Batik:</strong> This wax-resist dyeing technique produces vibrant fabrics with traditional motifs like peacocks, elephants and temple designs. Best seen in the coastal towns of Ambalangoda and Hikkaduwa.</p>
+                                    <p><strong>Dumbara Mats:</strong> Woven from hana grass and decorated with geometric patterns, these durable mats originate from the Dumbara valley near Kandy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Lacquerware
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#handicraftsAccordion">
+                                <div class="accordion-body">
+                                    <p>Traditional lacquer work from Matale involves coating wooden objects with resin from the lac insect (Kerria lacca), then polishing to a high gloss. Common items include bowls, boxes and ornaments in red, black and yellow designs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Brassware
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#handicraftsAccordion">
+                                <div class="accordion-body">
+                                    <p>Kandy is famous for its brass craftsmen who create oil lamps (panchadipastana), temple bells and statues using the lost-wax casting method. The Royal Brassware Factory in Kandy continues this 400-year tradition.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    Pottery
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#handicraftsAccordion">
+                                <div class="accordion-body">
+                                    <p>The Dediyawela village near Negombo produces distinctive black earthenware pots polished with pebbles. Traditional clay water pots (kalagedi) keep water cool naturally and are still used in rural areas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white mt-4">
+                <div class="card-body">
+                    <h4>Where to Buy Authentic Handicrafts</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Laksala</h5>
+                            <p>Government-run stores with quality guaranteed products at fixed prices. Locations in Colombo, Kandy, Galle and airport.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Barefoot</h5>
+                            <p>Colombo's iconic store featuring contemporary designs using traditional techniques. Famous for their handloom fabrics.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Local Markets</h5>
+                            <p>Pettah Floating Market (Colombo), Kandy Market, and Galle Fort boutiques offer authentic crafts with bargaining expected.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Culture & Traditions Content -->
+        <section id="culture-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Sri Lankan Culture & Traditions</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 bg-dark text-white">
+                                <img src="https://siba.edu.lk/adminImages/blogImage/652e0a8face66-traditionalDance.jpg" class="card-img-top" alt="Cultural Dance">
+                                <div class="card-body">
+                                    <h5 class="card-title">Traditional Dance</h5>
+                                    <p class="card-text">Sri Lanka has three main dance forms:</p>
+                                    <ul>
+                                        <li><strong>Kandyan:</strong> Originating from the hill country, featuring elaborate Ves costumes with silver ornaments and headdresses. The ves dance is performed in the annual Kandy Esala Perahera.</li>
+                                        <li><strong>Low Country:</strong> From coastal regions, featuring vibrant masks used in healing rituals (thovil) to exorcise demons causing illness.</li>
+                                        <li><strong>Sabaragamuwa:</strong> From Ratnapura area, combining elements of both with distinctive drum rhythms.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 bg-dark text-white">
+                                <img src="https://www.bordermail.com.au/images/transform/v1/crop/frm/beau.greenway/b1410feb-a313-41ce-99dc-58d2e5b85ca5.JPG/r0_0_5581_3721_w5581_h3721_fmax.jpg" class="card-img-top" alt="Festival">
+                                <div class="card-body">
+                                    <h5 class="card-title">Major Festivals</h5>
+                                    <ul>
+                                        <li><strong>Sinhala & Tamil New Year (April):</strong> Marks the sun's movement from Pisces to Aries. Families prepare milk rice, light hearths at auspicious times, and play traditional games.</li>
+                                        <li><strong>Vesak (May):</strong> Celebrates Buddha's birth, enlightenment and passing. Streets are decorated with lanterns (wesak koodu) and pandals depicting Jataka tales.</li>
+                                        <li><strong>Kandy Esala Perahera (July/Aug):</strong> 10-day procession with caparisoned elephants, dancers and drummers honoring the Sacred Tooth Relic.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 bg-dark text-white">
+                                <img src="https://www.soulsrilanka.com/image/trip/05/01.jpg" class="card-img-top" alt="Food">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cuisine</h5>
+                                    <p>Signature dishes include:</p>
+                                    <ul>
+                                        <li><strong>Rice and Curry:</strong> Steamed rice with 3-12 curries like dhal, jackfruit, eggplant and spicy sambols</li>
+                                        <li><strong>Hoppers (appa):</strong> Bowl-shaped pancakes made from fermented rice flour</li>
+                                        <li><strong>Kottu Roti:</strong> Chopped roti stir-fried with vegetables, egg and meat</li>
+                                        <li><strong>Lamprais:</strong> Dutch-influenced rice packet baked in banana leaves</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 bg-dark text-white">
+                                <img src="https://s3-ap-southeast-1.amazonaws.com/isite.lk/foodtour_itinerary/1664435372151688882238-n-1.jpg" class="card-img-top" alt="Religion">
+                                <div class="card-body">
+                                    <h5 class="card-title">Religious Practices</h5>
+                                    <ul>
+                                        <li><strong>Buddhism (70%):</strong> Theravada Buddhism influences daily life with temple visits (viharaya), almsgiving to monks and observance of poya days</li>
+                                        <li><strong>Hinduism (12%):</strong> Colorful kovils (temples) with gopuram towers, especially in Jaffna and Colombo</li>
+                                        <li><strong>Islam (10%):</strong> Moor and Malay communities observe Ramadan and Eid</li>
+                                        <li><strong>Christianity (7%):</strong> Colonial-era churches in Colombo, Galle and Jaffna</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-dark text-white h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Highlights</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark text-white">
+                                    <strong>Ayurveda:</strong> 3,000-year-old traditional medicine system using herbs, oils and massage
+                                </li>
+                                <li class="list-group-item bg-dark text-white">
+                                    <strong>Elephant Pageants:</strong> Tuskers in elaborate costumes lead temple processions
+                                </li>
+                                <li class="list-group-item bg-dark text-white">
+                                    <strong>Wedding Customs:</strong> Sinhalese brides wear Kandyan osari with 21 decorative ornaments
+                                </li>
+                                <li class="list-group-item bg-dark text-white">
+                                    <strong>New Year Rituals:</strong> Auspicious times for cooking, transactions and returning to work
+                                </li>
+                                <li class="list-group-item bg-dark text-white">
+                                    <strong>Architecture:</strong> Blend of ancient stupas, colonial buildings and modern designs
+                                </li>
+                                <li class="list-group-item bg-dark text-white">
+                                    <strong>Puppetry:</strong> Traditional string puppets (Rukada) used for folk tales
+                                </li>
+                                <li class="list-group-item bg-dark text-white">
+                                    <strong>Greetings:</strong> "Ayubowan" (may you live long) with palms together
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white mt-4">
+                <div class="card-body">
+                    <h4>Traditional Clothing</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Women's Attire</h5>
+                            <ul>
+                                <li><strong>Sari (Redda Hatte):</strong> 5.5m fabric draped with pleats at the waist</li>
+                                <li><strong>Osari (Kandyan Sari):</strong> More elaborate with frilled jacket and decorative sash</li>
+                                <li><strong>Half-Sari:</strong> Worn by unmarried girls with separate bodice and skirt</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Men's Attire</h5>
+                            <ul>
+                                <li><strong>Sarong:</strong> Checked or batik cloth wrapped around the waist</li>
+                                <li><strong>National Dress:</strong> White sarong with long-sleeved shirt and Nehru jacket</li>
+                                <li><strong>Temple Wear:</strong> White cloth covering shoulders and legs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Disasters & War Content -->
+        <section id="disasters-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Disasters & Civil War in Sri Lanka</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card bg-dark text-white mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Natural Disasters</h4>
+                            <p>Sri Lanka's tropical climate and geographical location make it vulnerable to several natural hazards:</p>
+                            
+                            <h5>2004 Indian Ocean Tsunami</h5>
+                            <ul>
+                                <li><strong>Date:</strong> December 26, 2004</li>
+                                <li><strong>Deaths:</strong> 35,322 confirmed</li>
+                                <li><strong>Displaced:</strong> 516,150 people</li>
+                                <li><strong>Damage:</strong> $1.5 billion (5% of GDP)</li>
+                                <li><strong>Worst affected:</strong> East and South coasts including Ampara, Galle and Matara</li>
+                            </ul>
+                            
+                            <h5>2017 Floods and Mudslides</h5>
+                            <ul>
+                                <li><strong>Date:</strong> May 2017</li>
+                                <li><strong>Deaths:</strong> 224 people</li>
+                                <li><strong>Displaced:</strong> 600,000 from their homes</li>
+                                <li><strong>Cause:</strong> Heavy monsoon rains (384mm in 24 hours)</li>
+                                <li><strong>Worst affected:</strong> Kalutara, Ratnapura and Galle districts</li>
+                            </ul>
+                            
+                            <h5>Other Notable Disasters</h5>
+                            <ul>
+                                <li><strong>1978 Cyclone:</strong> Killed 915 people</li>
+                                <li><strong>2016 Drought:</strong> Affected 1.2 million people</li>
+                                <li><strong>2021 MV X-Press Pearl:</strong> Worst marine ecological disaster with chemical spill</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card bg-dark text-white mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Sri Lankan Civil War (1983-2009)</h4>
+                            <p>The civil war was an armed conflict between the Sri Lankan government and the Liberation Tigers of Tamil Eelam (LTTE) seeking an independent Tamil state in the north and east.</p>
+                            
+                            <h5>Key Statistics</h5>
+                            <ul>
+                                <li><strong>Duration:</strong> July 23, 1983 - May 18, 2009 (25 years)</li>
+                                <li><strong>Casualties:</strong> Estimated 80,000-100,000 deaths</li>
+                                <li><strong>Displaced:</strong> 800,000 at peak (2001)</li>
+                                <li><strong>Child Soldiers:</strong> LTTE recruited 6,000-18,000</li>
+                                <li><strong>Suicide Attacks:</strong> LTTE pioneered modern suicide bombing tactics</li>
+                            </ul>
+                            
+                            <h5>Major Events</h5>
+                            <ul>
+                                <li><strong>1983:</strong> Black July riots spark full-scale war</li>
+                                <li><strong>1987-90:</strong> Indian Peace Keeping Force intervention</li>
+                                <li><strong>2002:</strong> Norwegian-brokered ceasefire</li>
+                                <li><strong>2009:</strong> Government's final offensive kills LTTE leader Prabhakaran</li>
+                            </ul>
+                            
+                            <h5>Aftermath</h5>
+                            <ul>
+                                <li>Continued ethnic tensions and human rights allegations</li>
+                                <li>Ongoing landmine clearance in former conflict zones</li>
+                                <li>Slow return of displaced Tamil populations</li>
+                                <li>Economic development in former war-torn areas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h4 class="card-title">Resilience and Recovery</h4>
+                    <p>Despite these challenges, Sri Lanka has shown remarkable resilience:</p>
+                    
+                    <h5>Tsunami Recovery</h5>
+                    <ul>
+                        <li>Rebuilt 98% of destroyed homes by 2010</li>
+                        <li>Established early warning systems</li>
+                        <li>Developed coastal buffer zones</li>
+                    </ul>
+                    
+                    <h5>Post-War Developments</h5>
+                    <ul>
+                        <li>Reconstructed roads and infrastructure in Northern Province</li>
+                        <li>Demining of 2,000+ sq km of former conflict areas</li>
+                        <li>Tourism revival in Jaffna and Eastern provinces</li>
+                    </ul>
+                    
+                    <h5>Current Challenges</h5>
+                    <ul>
+                        <li>Addressing wartime missing persons cases</li>
+                        <li>Reconciliation between communities</li>
+                        <li>Economic recovery from 2022 crisis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Vega Supercar Content -->
+        <section id="vega-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Vega EVX - Sri Lanka's Electric Supercar</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="vegaCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="https://cdn.motor1.com/images/mgl/lZ2Yw/s1/vega-evx-will-take-sri-lankan-ev-promises-to-the-2020-geneva-motor-show.jpg" class="d-block w-100" alt="Vega EVX Front">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.motor1.com/images/mgl/xWX9y/s3/sri-lanka-s-super-ev-check-vega-evx-s-real-technical-specifications.jpg" class="d-block w-100" alt="Vega EVX Side">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://pbs.twimg.com/media/EAfnKgnWkAIB2bb.jpg" class="d-block w-100" alt="Vega EVX Interior">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#vegaCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#vegaCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Sri Lanka's Automotive Marvel</h4>
+                            <p>The Vega EVX is Sri Lanka's first electric supercar, developed by Vega Innovations, a subsidiary of the Codegen Group. Unveiled at the 2020 Geneva Motor Show, it represents a technological leap for Sri Lanka's automotive industry.</p>
+                            
+                            <h5>Development Team</h5>
+                            <ul>
+                                <li><strong>Lead Designer:</strong> Harsha Subasinghe</li>
+                                <li><strong>Engineering:</strong> 100% Sri Lankan team</li>
+                                <li><strong>Testing:</strong> Done at Sri Lanka's only FIA-certified track in Pannala</li>
+                            </ul>
+                            
+                            <h5>Innovation Highlights</h5>
+                            <ul>
+                                <li>First EV with dual motor AWD system from South Asia</li>
+                                <li>Patented battery cooling technology</li>
+                                <li>Carbon fiber body panels manufactured locally</li>
+                                <li>AI-powered driver assistance systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h4 class="card-title">Technical Specifications</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6>Performance</h6>
+                                <ul>
+                                    <li><strong>Top Speed:</strong> 240 km/h (150 mph)</li>
+                                    <li><strong>Acceleration:</strong> 0-100 km/h in 3.1 seconds</li>
+                                    <li><strong>Power:</strong> 804 HP (600 kW)</li>
+                                    <li><strong>Torque:</strong> 760 Nm (560 lb-ft)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Battery & Range</h6>
+                                <ul>
+                                    <li><strong>Battery Capacity:</strong> 55 kWh</li>
+                                    <li><strong>Range:</strong> 250-300 km (155-186 miles)</li>
+                                    <li><strong>Charging:</strong> 80% in 30 mins (DC fast charge)</li>
+                                    <li><strong>Battery Type:</strong> Lithium-ion with liquid cooling</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Dimensions</h6>
+                                <ul>
+                                    <li><strong>Length:</strong> 4,650 mm (183 in)</li>
+                                    <li><strong>Width:</strong> 2,050 mm (81 in)</li>
+                                    <li><strong>Height:</strong> 1,200 mm (47 in)</li>
+                                    <li><strong>Weight:</strong> 1,800 kg (3,968 lbs)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Design Features</h4>
+                            <ul>
+                                <li><strong>Exterior:</strong> Aerodynamic design with active rear wing and butterfly doors</li>
+                                <li><strong>Interior:</strong> Luxurious leather with Sri Lankan-inspired motifs</li>
+                                <li><strong>Infotainment:</strong> 15.6" touchscreen with Sri Lankan tea leaf-inspired UI</li>
+                                <li><strong>Lighting:</strong> LED lights shaped like traditional oil lamps</li>
+                                <li><strong>Wheels:</strong> 20" alloys with design inspired by Kandyan dancers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Market Position</h4>
+                            <ul>
+                                <li><strong>Price:</strong> $400,000 (limited production)</li>
+                                <li><strong>Production:</strong> 25 units planned initially</li>
+                                <li><strong>Target Markets:</strong> Middle East, Europe, and collectors</li>
+                                <li><strong>Competitors:</strong> Rimac Nevera, Lotus Evija</li>
+                                <li><strong>Manufacturing:</strong> Hand-built in Colombo with 80% local content</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white mt-4">
+                <div class="card-body">
+                    <h4 class="card-title">Future Developments</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Vega EVX 2.0</h6>
+                            <ul>
+                                <li>Targeting 1,200 HP</li>
+                                <li>400 km range</li>
+                                <li>Advanced autonomous features</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Commercial Vehicles</h6>
+                            <ul>
+                                <li>Electric buses for Sri Lankan market</li>
+                                <li>Last-mile delivery vehicles</li>
+                                <li>Battery swapping stations</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Technology Transfer</h6>
+                            <ul>
+                                <li>Battery technology for renewable energy</li>
+                                <li>Motor systems for marine applications</li>
+                                <li>AI systems for traffic management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>About This Website</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h4 class="card-title">Discover Sri Lanka</h4>
+                    <p>This comprehensive website showcases Sri Lanka's rich cultural heritage, breathtaking natural beauty, and remarkable technological achievements.</p>
+                    
+                    <h5>Our Mission</h5>
+                    <p>To provide authentic, well-researched information about Sri Lanka's:</p>
+                    <ul>
+                        <li>3,000 years of recorded history</li>
+                        <li>8 UNESCO World Heritage Sites</li>
+                        <li>Diverse cultural traditions</li>
+                        <li>Resilience through challenges</li>
+                        <li>Innovations like the Vega EVX supercar</li>
+                    </ul>
+                    
+                    <h5>Content Sources</h5>
+                    <p>Our information comes from:</p>
+                    <ul>
+                        <li>Government tourism authorities</li>
+                        <li>Academic research papers</li>
+                        <li>Museum collections</li>
+                        <li>Verified historical accounts</li>
+                        <li>First-hand expert interviews</li>
+                    </ul>
+                    
+                    <h5>Technology</h5>
+                    <p>This responsive website is built with:</p>
+                    <ul>
+                        <li>Bootstrap 5 framework</li>
+                        <li>HTML5, CSS3 and JavaScript</li>
+                        <li>Optimized for all devices</li>
+                        <li>Fast-loading image compression</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white mt-4">
+                <div class="card-body">
+                    <h4 class="card-title">Our Team</h4>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="team-member text-center">
+                                <div class="rounded-circle overflow-hidden mx-auto mb-2" style="width: 150px; height: 150px; background: #555;"></div>
+                                <h5>Dr. Anura Bandara</h5>
+                                <p>Historian & Cultural Expert</p>
+                                <p>PhD in South Asian Studies, University of Peradeniya</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="team-member text-center">
+                                <div class="rounded-circle overflow-hidden mx-auto mb-2" style="width: 150px; height: 150px; background: #555;"></div>
+                                <h5>Nayomi Silva</h5>
+                                <p>Tourism Specialist</p>
+                                <p>20 years experience in Sri Lanka tourism industry</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="team-member text-center">
+                                <div class="rounded-circle overflow-hidden mx-auto mb-2" style="width: 150px; height: 150px; background: #555;"></div>
+                                <h5>Rajiv Fernando</h5>
+                                <p>Technology Editor</p>
+                                <p>Former engineer at Vega Innovations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact-section" class="content-section" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Contact Us</h2>
+                <button class="btn btn-outline-light back-to-dashboard">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </button>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Get in Touch</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control bg-dark text-white" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control bg-dark text-white" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select bg-dark text-white" id="subject">
+                                        <option>General Inquiry</option>
+                                        <option>Historical Information</option>
+                                        <option>Travel Planning</option>
+                                        <option>Website Feedback</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control bg-dark text-white" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Our Information</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i> 21/1, Oruthota, Digana via kandy</li>
+                                <li class="mb-3"><i class="bi bi-telephone-fill me-2"></i> +94 74 109 0272</li>
+                                <li class="mb-3"><i class="bi bi-envelope-fill me-2"></i> oshadhakd@gmail.com</li>
+                            </ul>
+                            <hr>
+                            <h5>Follow Us</h5>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                                <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                                <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                                <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                            </div>
+                            
+                            <hr>
+                            <h5>Visitor Centers</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>------</strong> -----------------</li>
+                                <li class="mb-2"><strong>------</strong> -----------------</li>
+                                <li class="mb-2"><strong>------</strong> -----------------</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-white mt-4">
+                <div class="card-body">
+                    <h4 class="card-title">Location Map</h4>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798511757687!2d79.8527282147207!3d6.927687195003838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596d3cb8fe07%3A0x2b0ae2edd563a661!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1623256789015!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Discover Sri Lanka</h5>
+                    <p>Your comprehensive guide to Sri Lanka's heritage, culture and innovation.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white" data-section="dashboard">Dashboard</a></li>
+                        <li><a href="#" class="text-white" data-section="about">About</a></li>
+                        <li><a href="#" class="text-white" data-section="contact">Contact</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white" data-section="history">History</a></li>
+                        <li><a href="#" class="text-white" data-section="places">Places</a></li>
+                        <li><a href="#" class="text-white" data-section="handicrafts">Handicrafts</a></li>
+                        <li><a href="#" class="text-white" data-section="vega">Vega EVX</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Updates</h5>
+                    <p>Add on your mail for updates on Sri Lankan tourism and culture.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control bg-dark text-white" placeholder="Your email" required>
+                        <button class="btn btn-primary" type="submit">Add</button>
+                    </div>
+                    <small class="text-muted">We'll never share your email with others.</small>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Discover Sri Lanka. All rights reserved by myself.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with love in Sri Lanka</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Handle navigation between sections
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dashboard card click handlers
+            document.querySelectorAll('.dashboard-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const section = this.getAttribute('data-section');
+                    showSection(section);
+                });
+            });
+            
+            // Nav link click handlers
+            document.querySelectorAll('[data-section]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = this.getAttribute('data-section');
+                    showSection(section);
+                });
+            });
+            
+            // Back to dashboard buttons
+            document.querySelectorAll('.back-to-dashboard').forEach(button => {
+                button.addEventListener('click', function() {
+                    showSection('dashboard');
+                });
+            });
+            
+            function showSection(section) {
+                // Hide all sections
+                document.querySelectorAll('section').forEach(sec => {
+                    sec.style.display = 'none';
+                });
+                
+                // Show selected section
+                const sectionElement = document.getElementById(`${section}-section`);
+                if (sectionElement) {
+                    sectionElement.style.display = 'block';
+                    
+                    // Add active class for animation
+                    sectionElement.classList.add('active-content');
+                    
+                    // Scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
